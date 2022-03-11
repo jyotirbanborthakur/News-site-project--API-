@@ -15,7 +15,7 @@ xhr.onprogress=function()
 }
 xhr.onload = function () {
    
-    if (this.status ===200) 
+    if (this.status ===202) 
     {
         
      setTimeout(() => {
