@@ -15,7 +15,7 @@ xhr.onprogress=function()
 }
 xhr.onload = function () {
    
-    if (this.status !=404) 
+    if (this.status ===200) 
     {
         
      setTimeout(() => {
@@ -46,7 +46,7 @@ xhr.onload = function () {
         });
     
      }, 1000);}
-    else { console.log("nothing") }
+    else { console.log("Recive nahi huwa gandu") }
 }
 xhr.send()
 
