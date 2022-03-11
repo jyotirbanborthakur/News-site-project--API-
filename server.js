@@ -2,7 +2,7 @@
 let NewsContent = document.getElementById("NewsContent");
 
 const xhr = new XMLHttpRequest();
-xhr.open('GET', "https://newsapi.org/v2/top-headlines?country=us&apiKey=98ebd886b4cb4c75925b11848c4adc30", true)
+xhr.open('POST', "https://newsapi.org/v2/top-headlines?country=us&apiKey=98ebd886b4cb4c75925b11848c4adc30", true)
 
 
 xhr.onprogress=function()
