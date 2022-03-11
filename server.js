@@ -2,7 +2,7 @@
 let NewsContent = document.getElementById("NewsContent");
 
 const xhr = new XMLHttpRequest();
-xhr.open('POST', "https://newsapi.org/v2/top-headlines?country=us&apiKey=98ebd886b4cb4c75925b11848c4adc30", true)
+xhr.open('GET', "https://newsapi.org/v2/top-headlines?country=us&apiKey=98ebd886b4cb4c75925b11848c4adc30", true)
 
 
 xhr.onprogress=function()
@@ -15,7 +15,7 @@ xhr.onprogress=function()
 }
 xhr.onload = function () {
    
-    if (this.status ===202) 
+    if (this.status ===200) 
     {
         
      setTimeout(() => {
@@ -46,7 +46,11 @@ xhr.onload = function () {
         });
     
      }, 1000);}
-    else { console.log("Receive nahi huwa gandu") }
+    else {
+      let abc=document.getElementById("spinner")
+      abc.innerHTML= `<div class="alert alert-danger" role="alert">
+ Status code 200 recieve nahi huwa beh Gandu
+  </div>` }
 }
 xhr.send()
 
