@@ -1,0 +1,4 @@
+.newsGrids{
+    display: flexbox;
+    flex-direction:column;
+}
