@@ -46,7 +46,7 @@ xhr.onload = function () {
         });
     
      }, 1000);}
-    else { console.log("Recive nahi huwa gandu") }
+    else { console.log("Receive nahi huwa gandu") }
 }
 xhr.send()
 
