@@ -2,7 +2,7 @@
 let NewsContent = document.getElementById("NewsContent");
 
 const xhr = new XMLHttpRequest();
-xhr.open('GET', "https://newsapi.org/v2/top-headlines?country=us&apiKey=98ebd886b4cb4c75925b11848c4adc30", true)
+xhr.open('GET', "https://gnews.io/api/v4/search?q=example&token=967c5fd9715ca031cdbde28f3e6b00d4", true)
 
 
 xhr.onprogress = function () {
@@ -28,13 +28,13 @@ xhr.onload = function () {
         NewsContent.innerHTML += `
             <div class="col">
             <div class="card h-100">
-              <img src="${element.urlToImage}" class="card-img-top" alt="N/A">
+              <img src="${element.image}" class="card-img-top" alt="N/A">
               <div class="card-body">
                 <h5 class="card-title" id="card-title">${element.title}</h5>
                 <p class="card-text">${element.description}</p>
               </div>
               <div class="card-footer">
-              <small class="text-muted">News by ${element.author}</small>
+              <small class="text-muted">News by ${element.source.name}</small>
             </div>
             </div>
           </div>
