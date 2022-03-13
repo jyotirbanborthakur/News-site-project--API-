@@ -49,7 +49,7 @@ xhr.onload = function () {
   else {
     let abc = document.getElementById("spinner")
     abc.innerHTML = `<div class="alert alert-danger" role="alert">
- Status code 200 recieve nahi huwa beh Gandu
+ Status code 200 recieve nahi huwa 
   </div>` }
 }
 xhr.send()
