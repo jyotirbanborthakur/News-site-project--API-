@@ -31,7 +31,7 @@ xhr.onload = function () {
               <img src="${element.image}" class="card-img-top" alt="N/A">
               <div class="card-body">
                 <h5 class="card-title" id="card-title">${element.title}</h5>
-                <p class="card-text">${element.description}</p>
+                <p class="card-text"><a href = ${element.url} target ="#">${element.description}</a></p>
               </div>
               <div class="card-footer">
               <small class="text-muted">News by ${element.source.name}</small>
